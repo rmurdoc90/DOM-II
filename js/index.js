@@ -65,5 +65,19 @@ dragged.addEventListener('drop', (event) =>{
 // <----------------Drag/Drop------------------------->
 
 // <-------------------Load---------------------->
-
+window.addEventListener('load', (event) =>{
+  console.log('page is loaded')
+})
 // <-------------------Load---------------------->
+
+// <-------------------Focus---------------------->
+ document.querySelector('a:nth-of-type(3)').addEventListener('focus',(event) =>{
+   console.log(event.type);
+ })
+// <-------------------Focus---------------------->
+
+// <-------------------Resize---------------------->
+
+// <-------------------Resize---------------------->
+
+
