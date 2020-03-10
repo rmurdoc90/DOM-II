@@ -78,6 +78,27 @@ window.addEventListener('load', (event) =>{
 
 // <-------------------Resize---------------------->
 
+window.addEventListener('resize', (event)=>{
+  window.innerHeight = '1000px'
+  window.innerWidth = '1500px'
+});
+
 // <-------------------Resize---------------------->
+
+// <-------------------Scroll---------------------->
+let scrollPosition = 0;
+window.addEventListener('scroll', function(e){
+  scrollPosition = window.scrollY;
+  console.log(scrollPosition)
+})
+// <-------------------Scroll---------------------->
+
+// <-------------------Select---------------------->
+
+// <-------------------Select---------------------->
+
+// <-------------------Dblclick---------------------->
+
+// <-------------------Dblclick---------------------->
 
 
