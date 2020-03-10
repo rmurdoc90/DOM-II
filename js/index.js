@@ -94,11 +94,25 @@ window.addEventListener('scroll', function(e){
 // <-------------------Scroll---------------------->
 
 // <-------------------Select---------------------->
-
+function selection(event){
+ let log = document.querySelector('.logo-heading')
+ let selected = 'FUN BUS 2'
+ log.textContent = `${selected}`
+}
+let input = document.querySelector('h1');
+input.addEventListener('select', selection);
+console.log(selection())
 // <-------------------Select---------------------->
 
 // <-------------------Dblclick---------------------->
+let dblClick = document.querySelector('a:nth-of-type(4)');
+dblClick.addEventListener('dblclick', function(e){
+  dblClick.style.color= 'orange'
 
+  setTimeout(function(){
+    dblClick.style.color='black'
+  },1000)
+});
 // <-------------------Dblclick---------------------->
 
 
