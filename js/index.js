@@ -32,3 +32,38 @@ function logKey(e){
 }
 
 // <----------------Keydown------------------------->
+
+// <-------------------Wheel---------------------->
+let scale = 1;
+let wheel = document.getElementById('yellow-bus');
+wheel.onwheel = zoom;
+function zoom(event){
+  event.preventDefault();
+
+  scale += event.deltaY * -0.01;
+  scale = Math.min(Math.max(.125, scale), 4);
+  wheel.style.transform = `scale(${scale})`;
+}
+// <----------------Wheel------------------------->
+
+// <----------------Drag/Drop------------------------->
+var dragged= document.querySelector('a:nth-of-type(2)');
+dragged.addEventListener('drag', (event) =>{
+
+});
+dragged.addEventListener("dragstart", (event) =>{
+  dragged=event.target;
+  event.target.style.opacity = .5;
+});
+dragged.addEventListener('dragend',(event) =>{
+  event.target.style.opacity = '';
+})
+dragged.addEventListener('drop', (event) =>{
+  event.preventDefault();
+  event.target.style.color = 'black';
+});
+// <----------------Drag/Drop------------------------->
+
+// <-------------------Load---------------------->
+
+// <-------------------Load---------------------->
