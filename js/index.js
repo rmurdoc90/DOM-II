@@ -15,7 +15,7 @@
 let mouseHover = document.querySelector('a');
 mouseHover.addEventListener('mouseover', (event) =>{
   event.target.style.color = 'red';
-
+  preventDefault();
   setTimeout(function(){
     event.target.style.color='black'
   },500)
@@ -115,4 +115,23 @@ dblClick.addEventListener('dblclick', function(e){
 });
 // <-------------------Dblclick---------------------->
 
+// <-------------------Stop Propogation---------------------->
 
+let clickEvent = document.querySelector('h2');
+clickEvent.addEventListener('click', (event) =>{
+  console.log(event.path)
+  event.stopPropagation();
+  console.log(event.target)
+
+
+})
+
+let clickImg = document.querySelector('.img-content img');
+clickImg.addEventListener('click', (event) =>{
+  console.log(event.path)
+  event.stopPropagation();
+  console.log(event.target)
+
+})
+
+// <-------------------Stop Propogation---------------------->
